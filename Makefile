@@ -51,8 +51,6 @@ CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -g3
 
 all:	$(NAME) stack vector map
 
-
-
 stack:	$(NAME_S_FT) $(NAME_S_STD)
 
 vector: $(NAME_V_FT) $(NAME_V_STD)
