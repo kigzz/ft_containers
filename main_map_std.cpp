@@ -31,6 +31,7 @@ int main(void)
 	first['b']=30;
 	first['c']=50;
 	first['d']=70;
+
 	std::cout << "Default constructor : OK " << std::endl;
 	std::map<char,int> second (first.begin(),first.end());
 	std::cout << "Range constructor : OK " << std::endl;
@@ -103,8 +104,6 @@ int main(void)
 	std::cout << "char_bool max_size: " << char_bool.max_size() << std::endl;
 	std::cout << "\n";
 
-
-
 	int_string.insert(std::pair<int, std::string>(42, "Hello World!"));
 	string_string.insert(std::pair<std::string, std::string>("uwu", "Hello World!"));
 	char_char.insert(std::pair<char, char>('o', 'w'));
@@ -133,7 +132,6 @@ int main(void)
 	std::cout << "char_bool max_size: " << char_bool.max_size() << std::endl;
 	std::cout << "\n";
 
-
 	std::cout << "============= ELEMENT ACCESS =============" << std::endl;
 	std::cout << "\n";
 
@@ -142,8 +140,16 @@ int main(void)
 	std::cout << "int_string " << int_string[42] << std::endl;
 	std::cout << "string_string " << string_string["uwu"] << std::endl;
 	std::cout << "char_char " << char_char['o'] << std::endl;
-	std::cout << "char_bool " << char_bool['o'] << std::endl << std::endl;
+	std::cout << "char_bool " << char_bool['o'] << std::endl;
 
+	std::cout << "\n";
+	std::cout << "===== At() =====" << std::endl;
+	std::cout << "int_string: " << int_string.at(42) << std::endl;
+	std::cout << "string_string : " << string_string.at("uwu") << std::endl;
+	std::cout << "char_char: " << char_char.at('o') << std::endl;
+	std::cout << "char_bool: " << char_bool.at('o') << std::endl;
+
+	std::cout << "\n";
 	std::cout << "=============  MODIFIERS ============= " << std::endl;
 	std::cout << "\n";
 

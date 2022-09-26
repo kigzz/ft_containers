@@ -54,10 +54,10 @@ namespace ft
 		public:
 
 			//Constructors
-			explicit vector (const allocator_type& alloc = allocator_type())
+			explicit vector(const allocator_type& alloc = allocator_type())
 				: _alloc(alloc), _start(NULL), _finish(NULL), _end_of_storage(NULL) { }
 
-			explicit vector (size_type n, const value_type& val = value_type(),
+			explicit vector(size_type n, const value_type& val = value_type(),
 					const allocator_type& alloc = allocator_type()) : _alloc(alloc) {
 				_start = _alloc.allocate(n);
 				_finish = _start;
@@ -167,7 +167,7 @@ namespace ft
 				return (size() ? false : true);
 			}
 
-			void reserve (size_type n) {
+			void reserve(size_type n) {
 				if (n > max_size())
 					throw (std::length_error("vector::reserve: n > this->max_size()"));
 				else if (n > capacity())
@@ -189,7 +189,7 @@ namespace ft
 					throw std::out_of_range("vector::at: out of range");
 			}
 
-			const_reference at (size_type n) const {
+			const_reference at(size_type n) const {
 				if (n < size())
 					return *(_start + n);
 				else
@@ -212,7 +212,7 @@ namespace ft
 
 			// Modifiers
 			template <class InputIterator>
-			void assign (InputIterator first, InputIterator last,
+			void assign(InputIterator first, InputIterator last,
 				typename ft::enable_if<!ft::is_integral<InputIterator>::value,
 					InputIterator>::type* = NULL) {
 				size_type new_size = 0;
@@ -225,7 +225,7 @@ namespace ft
 					this->push_back(*first++);
 			}
 
-			void assign (size_type n, const T& val) {
+			void assign(size_type n, const T& val) {
 				if (n > capacity())
 					reallocate(n);
 				this->clear();
@@ -233,17 +233,17 @@ namespace ft
 					this->push_back(val);
 			}
 
-			void push_back (const value_type& val) {
+			void push_back(const value_type& val) {
 				if (_finish == _end_of_storage)
 					this->reallocate(size() ? size() * 2 : 1);
 				_alloc.construct(_finish++, val);
 			}
 
-			void pop_back () {
+			void pop_back() {
 				_alloc.destroy(--_finish);
 			}
 
-			iterator insert (iterator position, const value_type& val) {
+			iterator insert(iterator position, const value_type& val) {
 				size_type pos = position - begin();
 				if (position == end()) {
 					push_back(val);
@@ -263,7 +263,7 @@ namespace ft
 				return (_start + pos);
 			}
 
-			void insert (iterator position, size_type n, const value_type& val) {
+			void insert(iterator position, size_type n, const value_type& val) {
 				if (size() + n > capacity()) {
 					difference_type diff = position - begin();
 					this->reallocate(size() + n);
@@ -276,7 +276,7 @@ namespace ft
 			}
 
 			template <class InputIterator>
-			void insert (iterator position, InputIterator first, InputIterator last,
+			void insert(iterator position, InputIterator first, InputIterator last,
 			 typename ft::enable_if<!ft::is_integral<InputIterator>::value,
 				InputIterator>::type* = NULL) {
 				size_type i = 0;
@@ -293,7 +293,7 @@ namespace ft
 				}
 			}
 
-			iterator erase (iterator position) {
+			iterator erase(iterator position) {
 				if (size()) {
 					size_type n = position.base() - begin().base();
 					while (_start + n < _finish - 1) {
@@ -305,7 +305,7 @@ namespace ft
 				return (position);
 			}
 
-			iterator erase (iterator first, iterator last) {
+			iterator erase(iterator first, iterator last) {
 				if (size()) {
 					size_type i = first.base() - begin().base();
 					size_type n = last.base() - begin().base();
@@ -320,7 +320,7 @@ namespace ft
 				return (first);
 			}
 
-			void swap (vector& x) {
+			void swap(vector& x) {
 				if (x != *this) {
 					pointer tmp_start = x._start;
 					pointer tmp_finish = x._finish;

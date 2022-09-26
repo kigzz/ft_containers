@@ -1,0 +1,619 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+ 
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Mon Sep 26 16:17:28 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = ubuntu
+# makefile (from 'Makefile', line 33)
+OBJS_STACK_STD = $(TEST_STACK_STD:.cpp=.o)
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /mnt/nfs/homes/bpouchep/.Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /mnt/nfs/homes/bpouchep/Desktop/ft_containers
+# makefile
+SHELL = /bin/sh
+# makefile (from 'Makefile', line 45)
+RM = rm -f
+# environment
+VTE_VERSION = 6003
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/code
+# makefile (from 'Makefile', line 26)
+TEST_VECTOR_FT = main_vector_ft.cpp
+# makefile (from 'Makefile', line 47)
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
+# environment
+JOURNAL_STREAM = 9:57638
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# makefile (from 'main_map_std.d', line 1)
+MAKEFILE_LIST :=  Makefile main_map_ft.d main_map_std.d
+# automatic
+@F = $(notdir $@)
+# environment
+IM_CONFIG_PHASE = 1
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/gnome:/usr/share/ubuntu:/mnt/nfs/homes/bpouchep/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/38300/bus
+# makefile (from 'Makefile', line 29)
+OBJS = $(SRCS:.cpp=.o)
+# environment
+MANAGERPID = 3282
+# makefile (from 'Makefile', line 19)
+NAME_M_STD = std_map_test
+# makefile (from 'Makefile', line 39)
+OBJS_MAP_FT = $(TEST_MAP_FT:.cpp=.o)
+# environment
+VSCODE_CWD = /mnt/nfs/homes/bpouchep/Desktop/ft_containers
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# environment
+KRB5CCNAME = FILE:/tmp/krb5cc_38300_Gd1UwV
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /mnt/nfs/homes/bpouchep/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+GPG_AGENT_INFO = /run/user/38300/gnupg/S.gpg-agent:0:1
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+SESSION_MANAGER = local/e1r6p12.clusters.42paris.fr:@/tmp/.ICE-unix/3829,unix/e1r6p12.clusters.42paris.fr:/tmp/.ICE-unix/3829
+# environment
+XDG_RUNTIME_DIR = /run/user/38300
+# makefile (from 'Makefile', line 24)
+TEST_STACK_FT = main_stack_ft.cpp
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+INVOCATION_ID = be20d54259fc40f19fa5a6b15c6be2fc
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/bpouchep
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+SSH_AUTH_SOCK = /run/user/38300/keyring/ssh
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# makefile (from 'Makefile', line 27)
+TEST_VECTOR_STD = main_vector_std.cpp
+# makefile (from 'Makefile', line 14)
+NAME_S_FT = ft_stack_test
+# environment
+PWD = /mnt/nfs/homes/bpouchep/Desktop/ft_containers
+# default
+.LOADED := 
+# environment
+SSH_AGENT_PID = 3789
+# makefile (from 'Makefile', line 42)
+DEPS_MAP_STD = $(TEST_MAP_STD:.cpp=.d)
+# makefile (from 'Makefile', line 36)
+DEPS_VECTOR_FT = $(TEST_VECTOR_FT:.cpp=.d)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /mnt/nfs/homes/bpouchep
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /mnt/nfs/homes/bpouchep/.config/Code/CachedData/784b0177c56c607789f9638da7b6bf3230d47a8c
+# environment
+LOGNAME = bpouchep
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# makefile (from 'Makefile', line 41)
+OBJS_MAP_STD = $(TEST_MAP_STD:.cpp=.o)
+# makefile (from 'Makefile', line 35)
+OBJS_VECTOR_FT = $(TEST_VECTOR_FT:.cpp=.o)
+# environment
+ZSH = /mnt/nfs/homes/bpouchep/.oh-my-zsh
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+MAKELEVEL := 0
+# environment
+COLORTERM = truecolor
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# makefile (from 'Makefile', line 21)
+SRCS = main.cpp
+# environment
+SHLVL = 2
+# makefile (from 'Makefile', line 46)
+CC = c++
+# makefile (from 'Makefile', line 25)
+TEST_STACK_STD = main_stack_std.cpp
+# makefile (from 'Makefile', line 18)
+NAME_M_FT = ft_map_test
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = bpouchep
+# makefile (from 'Makefile', line 16)
+NAME_V_FT = ft_vector_test
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from 'Makefile', line 44)
+INCLUDE = include
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# environment
+LIBVIRT_DEFAULT_URI = qemu:///system
+# makefile (from 'Makefile', line 40)
+DEPS_MAP_FT = $(TEST_MAP_FT:.cpp=.d)
+# makefile (from 'Makefile', line 32)
+DEPS_STACK_FT = $(TEST_STACK_FT:.cpp=.d)
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# makefile (from 'Makefile', line 23)
+TEST_MAP_STD = main_map_std.cpp
+# default
+MAKE_COMMAND := make
+# environment
+OLDPWD = /mnt/nfs/homes/bpouchep/Desktop/ft_containers/containers_test
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+VSCODE_IPC_HOOK = /run/user/38300/vscode-8ee1180d-1.71.0-main.sock
+# makefile (from 'Makefile', line 31)
+OBJS_STACK_FT = $(TEST_STACK_FT:.cpp=.o)
+# makefile
+MAKEFLAGS = pqrR
+# makefile (from 'Makefile', line 15)
+NAME_S_STD = std_stack_test
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# makefile (from 'Makefile', line 38)
+DEPS_VECTOR_STD = $(TEST_VECTOR_STD:.cpp=.d)
+# automatic
++F = $(notdir $+)
+# environment
+NO_AT_BRIDGE = 1
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
+# makefile (from 'Makefile', line 22)
+TEST_MAP_FT = main_map_ft.cpp
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'Makefile', line 37)
+OBJS_VECTOR_STD = $(TEST_VECTOR_STD:.cpp=.o)
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/b1029a3a_e3f5_43f8_8710_5d7416824e0f
+# automatic
+^F = $(notdir $^)
+# makefile (from 'Makefile', line 30)
+DEPS = $(SRCS:.cpp=.d)
+# environment
+GNOME_TERMINAL_SERVICE = :1.96
+# default
+SUFFIXES := 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# makefile (from 'Makefile', line 17)
+NAME_V_STD = std_vector_test
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# makefile (from 'Makefile', line 13)
+NAME = ft_containers
+# default
+.RECIPEPREFIX := 
+# makefile (from 'Makefile', line 34)
+ 
+DEPS_STACK_STD = $(TEST_STACK_STD:.cpp=.d)
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+DOCKER_HOST = unix:///run/user/38300/docker.sock
+# environment
+VSCODE_PID = 12798
+# variable set hash-table stats:
+# Load=138/1024=13%, Rehash=0, Collisions=30/212=14%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 56, inode 155321632): 25 files, no impossibilities.
+
+# 25 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+%.o: %.cpp
+#  recipe to execute (from 'Makefile', line 50):
+	@$(CC) $(CFLAGS) -MMD -MP -c $< -o $@ -I $(INCLUDE)
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+main_map_std.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: ft_containers stack vector map
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+
+map.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: all clean fclean re stack vector map
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+main_map_std.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-09-26 16:17:25.763010901
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+main_map_ft.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+main_vector_std.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-09-26 16:17:23.683998673
+#  File has been updated.
+#  Successfully updated.
+
+rbtree_iterator.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+main_map_ft.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-09-26 16:14:42.123048365
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+main.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-09-26 15:50:11.85642137
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+main_stack_std.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+map: ft_map_test std_map_test
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+main_vector_ft.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 86):
+	@$(RM) $(NAME) $(NAME_S_FT) $(NAME_S_STD) $(NAME_V_FT) $(NAME_V_STD) $(NAME_M_FT) $(NAME_M_STD)
+	@$(RM) ft_map ft_vector ft_stack std_map std_vector std_stack
+
+main_map_std.o: main_map_std.cpp map.hpp iterator.hpp utils.hpp pair.hpp rbtree.hpp rbtree_iterator.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+utils.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+main.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+main_vector_std.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+vector: ft_vector_test std_vector_test
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+main_stack_ft.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ft_containers: main.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+#  recipe to execute (from 'Makefile', line 79):
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+iterator.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+main_map_ft.o: main_map_ft.cpp map.hpp iterator.hpp utils.hpp pair.hpp rbtree.hpp rbtree_iterator.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 82):
+	@$(RM) $(OBJS) $(DEPS) $(OBJS_STACK_FT) $(OBJS_STACK_STD) $(DEPS_STACK_FT) $(DEPS_STACK_STD)
+	@$(RM) $(OBJS_VECTOR_FT) $(OBJS_VECTOR_STD) $(DEPS_VECTOR_FT) $(DEPS_VECTOR_STD)
+	@$(RM) $(OBJS_MAP_FT) $(OBJS_MAP_STD) $(DEPS_MAP_FT) $(DEPS_MAP_STD)
+
+# Not a target:
+main_stack_std.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ft_map_test: main_map_ft.o main_map_std.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 73):
+	$(CC) $(CFLAGS) $(OBJS_MAP_FT) -o $(NAME_M_FT)
+	$(CC) $(CFLAGS) $(OBJS_MAP_STD) -o $(NAME_M_STD)
+	./$(NAME_M_FT) > ft_map
+	./$(NAME_M_STD) > std_map
+
+# Not a target:
+std_map_test:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+main_vector_ft.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ft_vector_test: main_vector_ft.o main_vector_std.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 67):
+	$(CC) $(CFLAGS) $(OBJS_VECTOR_FT) -o $(NAME_V_FT)
+	$(CC) $(CFLAGS) $(OBJS_VECTOR_STD) -o $(NAME_V_STD)
+	./$(NAME_V_FT) > ft_vector
+	./$(NAME_V_STD) > std_vector
+
+# Not a target:
+std_vector_test:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+main.o: main.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := main.o
+# automatic
+# % := 
+# automatic
+# * := main
+# automatic
+# + := main.cpp
+# automatic
+# | := 
+# automatic
+# < := main.cpp
+# automatic
+# ^ := main.cpp
+# automatic
+# ? := main.cpp
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/16=12%
+ 
+#  recipe to execute (from 'Makefile', line 50):
+	@$(CC) $(CFLAGS) -MMD -MP -c $< -o $@ -I $(INCLUDE)
+
+# Not a target:
+main_stack_ft.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+stack: ft_stack_test std_stack_test
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+ft_stack_test: main_stack_ft.o main_stack_std.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 61):
+	$(CC) $(CFLAGS) $(OBJS_STACK_FT) -o $(NAME_S_FT)
+	$(CC) $(CFLAGS) $(OBJS_STACK_STD) -o $(NAME_S_STD)
+	./$(NAME_S_FT) > ft_stack
+	./$(NAME_S_STD) > std_stack
+
+# Not a target:
+std_stack_test:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+pair.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+rbtree.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=41/1024=4%, Rehash=0, Collisions=0/124=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 58 / storage = 694 B / avg = 11 B
+# current buf: size = 8162 B / used = 694 B / count = 58 / avg = 11 B
+
+# strcache performance: lookups = 146 / hit rate = 60%
+# hash-table stats:
+# Load=58/8192=1%, Rehash=0, Collisions=1/146=1%
+# Finished Make data base on Mon Sep 26 16:17:28 2022
+
+ 

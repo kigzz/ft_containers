@@ -1,0 +1,28 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/mnt/nfs/homes/bpouchep/Desktop/ft_containers'
+c++ -Wall -Wextra -Werror -std=c++98 -g3 -MMD -MP -c main.cpp -o main.o -I include
+c++ -Wall -Wextra -Werror -std=c++98 -g3 main.o -o ft_containers
+ 
+c++ -Wall -Wextra -Werror -std=c++98 -g3 -MMD -MP -c main_stack_ft.cpp -o main_stack_ft.o -I include
+c++ -Wall -Wextra -Werror -std=c++98 -g3 -MMD -MP -c main_stack_std.cpp -o main_stack_std.o -I include
+c++ -Wall -Wextra -Werror -std=c++98 -g3 main_stack_ft.o -o ft_stack_test
+c++ -Wall -Wextra -Werror -std=c++98 -g3 main_stack_std.o -o std_stack_test
+./ft_stack_test > ft_stack
+./std_stack_test > std_stack
+c++ -Wall -Wextra -Werror -std=c++98 -g3 -MMD -MP -c main_vector_ft.cpp -o main_vector_ft.o -I include
+c++ -Wall -Wextra -Werror -std=c++98 -g3 -MMD -MP -c main_vector_std.cpp -o main_vector_std.o -I include
+c++ -Wall -Wextra -Werror -std=c++98 -g3 main_vector_ft.o -o ft_vector_test
+c++ -Wall -Wextra -Werror -std=c++98 -g3 main_vector_std.o -o std_vector_test
+./ft_vector_test > ft_vector
+./std_vector_test > std_vector
+c++ -Wall -Wextra -Werror -std=c++98 -g3 -MMD -MP -c main_map_std.cpp -o main_map_std.o -I include
+c++ -Wall -Wextra -Werror -std=c++98 -g3 main_map_ft.o -o ft_map_test
+c++ -Wall -Wextra -Werror -std=c++98 -g3 main_map_std.o -o std_map_test
+./ft_map_test > ft_map
+./std_map_test > std_map
+make: Leaving directory '/mnt/nfs/homes/bpouchep/Desktop/ft_containers'
+ 
+make: *** No rule to make target 'std_stack_test', needed by 'stack'.
+make: *** No rule to make target 'std_vector_test', needed by 'vector'.
+make: *** No rule to make target 'std_map_test', needed by 'map'.
+
