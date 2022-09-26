@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   vector_iterator.hpp                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpouchep <bpouchep@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/16 13:56:53 by bpouchep          #+#    #+#             */
+/*   Updated: 2022/09/16 13:56:54 by bpouchep         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_CONTAINERS_VECTOR_ITERATOR_HPP
 #define FT_CONTAINERS_VECTOR_ITERATOR_HPP
 

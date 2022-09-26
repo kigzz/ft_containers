@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rbtree_iterator.hpp                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpouchep <bpouchep@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/16 13:56:35 by bpouchep          #+#    #+#             */
+/*   Updated: 2022/09/16 13:56:35 by bpouchep         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_CONTAINERS_RBTREE_ITERATOR_HPP
 #define FT_CONTAINERS_RBTREE_ITERATOR_HPP
 

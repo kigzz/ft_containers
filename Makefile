@@ -1,92 +1,94 @@
-NAME 		=	ft_containers
-NAME_S		=	stack_test
-NAME_V		=	vector_test
-NAME_M		=	map_test
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: bpouchep <bpouchep@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/07/27 03:12:29 by bpouchep          #+#    #+#              #
+#    Updated: 2022/07/27 03:12:33 by bpouchep         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-SRCS 		=	main.cpp
-TEST_MAP	=	main_map.cpp
-TEST_STACK	=	main_stack.cpp
-TEST_VECTOR	=	main_vector.cpp
+NAME 			=	ft_containers
+NAME_S_FT		=	ft_stack_test
+NAME_S_STD		=	std_stack_test
+NAME_V_FT		=	ft_vector_test
+NAME_V_STD		=	std_vector_test
+NAME_M_FT		=	ft_map_test
+NAME_M_STD		=	std_map_test
 
-OBJS		=		$(SRCS:.cpp=.o)
-DEPS		=		$(SRCS:.cpp=.d)
-OBJS_STACK	=		$(TEST_STACK:.cpp=.o)
-DEPS_STACK	=		$(TEST_STACK:.cpp=.d)
-OBJS_VECTOR	=		$(TEST_VECTOR:.cpp=.o)
-DEPS_VECTOR	=		$(TEST_VECTOR:.cpp=.d)
-OBJS_MAP	=		$(TEST_MAP:.cpp=.o)
-DEPS_MAP	=		$(TEST_MAP:.cpp=.d)
+SRCS 			=	main.cpp
+TEST_MAP_FT		=	main_map_ft.cpp
+TEST_MAP_STD	=	main_map_std.cpp
+TEST_STACK_FT	=	main_stack_ft.cpp
+TEST_STACK_STD	=	main_stack_std.cpp
+TEST_VECTOR_FT	=	main_vector_ft.cpp
+TEST_VECTOR_STD	=	main_vector_std.cpp
+
+OBJS			=		$(SRCS:.cpp=.o)
+DEPS			=		$(SRCS:.cpp=.d)
+OBJS_STACK_FT	=		$(TEST_STACK_FT:.cpp=.o)
+DEPS_STACK_FT	=		$(TEST_STACK_FT:.cpp=.d)
+OBJS_STACK_STD	=		$(TEST_STACK_STD:.cpp=.o)
+DEPS_STACK_STD	=		$(TEST_STACK_STD:.cpp=.d)
+OBJS_VECTOR_FT	=		$(TEST_VECTOR_FT:.cpp=.o)
+DEPS_VECTOR_FT	=		$(TEST_VECTOR_FT:.cpp=.d)
+OBJS_VECTOR_STD	=		$(TEST_VECTOR_STD:.cpp=.o)
+DEPS_VECTOR_STD	=		$(TEST_VECTOR_STD:.cpp=.d)
+OBJS_MAP_FT		=		$(TEST_MAP_FT:.cpp=.o)
+DEPS_MAP_FT		=		$(TEST_MAP_FT:.cpp=.d)
+OBJS_MAP_STD	=		$(TEST_MAP_STD:.cpp=.o)
+DEPS_MAP_STD	=		$(TEST_MAP_STD:.cpp=.d)
 
 INCLUDE		= 		include
 RM			=		rm -f
-CC			=		clang++
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic
+CC			=		c++
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -g3
 
 %.o:				%.cpp
 	@$(CC) $(CFLAGS) -MMD -MP -c $< -o $@ -I $(INCLUDE)
 
-all:	$(NAME)
+all:	$(NAME) stack vector map
 
-stack:	$(NAME_S)
 
-vector: $(NAME_V)
 
-map:	$(NAME_M)
+stack:	$(NAME_S_FT) $(NAME_S_STD)
 
-$(NAME_S):		$(OBJS_STACK)
-	@echo "TEST FOR STACK HAVE BEEN COMPILED"
-	$(CC) $(CFLAGS) $(OBJS_STACK) -o $(NAME_S)
-$(NAME_V):		$(OBJS_VECTOR)
-	@echo "TEST FOR STACK HAVE BEEN COMPILED"
-	$(CC) $(CFLAGS) $(OBJS_VECTOR) -o $(NAME_V)
-$(NAME_M):		$(OBJS_MAP)
-	@echo "TEST FOR MAP HAVE BEEN COMPILED"
-	$(CC) $(CFLAGS) $(OBJS_MAP) -o $(NAME_M)
+vector: $(NAME_V_FT) $(NAME_V_STD)
+
+map:	$(NAME_M_FT) $(NAME_M_STD)
+
+$(NAME_S_FT):		$(OBJS_STACK_FT) $(OBJS_STACK_STD)
+	$(CC) $(CFLAGS) $(OBJS_STACK_FT) -o $(NAME_S_FT)
+	$(CC) $(CFLAGS) $(OBJS_STACK_STD) -o $(NAME_S_STD)
+	./$(NAME_S_FT) > ft_stack
+	./$(NAME_S_STD) > std_stack
+
+$(NAME_V_FT):		$(OBJS_VECTOR_FT) $(OBJS_VECTOR_STD)
+	$(CC) $(CFLAGS) $(OBJS_VECTOR_FT) -o $(NAME_V_FT)
+	$(CC) $(CFLAGS) $(OBJS_VECTOR_STD) -o $(NAME_V_STD)
+	./$(NAME_V_FT) > ft_vector
+	./$(NAME_V_STD) > std_vector
+
+$(NAME_M_FT):		$(OBJS_MAP_FT) $(OBJS_MAP_STD)
+	$(CC) $(CFLAGS) $(OBJS_MAP_FT) -o $(NAME_M_FT)
+	$(CC) $(CFLAGS) $(OBJS_MAP_STD) -o $(NAME_M_STD)
+	./$(NAME_M_FT) > ft_map
+	./$(NAME_M_STD) > std_map
+
 $(NAME):		$(OBJS)
-	@clear
-	@echo "\033[1;34m                                                                                                                     "
-	@echo "#######                                                  ###                                                   "
-	@echo "#       #    #   ##   #    #  ####    ##   #      ###### ###  ####     #####  #####   ####       # ######  ####  ##### "
-	@echo "#       ##  ##  #  #  #    # #    #  #  #  #      #       #  #         #    # #    # #    #      # #      #    #   #   "
-	@echo "#####   # ## # #    # #    # #      #    # #      #####  #    ####     #    # #    # #    #      # #####  #        #   "
-	@echo "#       #    # ###### #    # #  ### ###### #      #               #    #####  #####  #    #      # #      #        #   "
-	@echo "#       #    # #    # #    # #    # #    # #      #          #    #    #      #   #  #    # #    # #      #    #   #   "
-	@echo "####### #    # #    #  ####   ####  #    # ###### ######      ####     #      #    #  ####   ####  ######  ####    #   "
-	@echo "									"
-	@echo "Project name : $(NAME)"
-	@echo "\n\033[1;32mCompilation en cours... ⌛\033[0;m\n"
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME_M)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME_V)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME_S)
-	@make wait
-	@echo "Bonne correction!"
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-	@$(RM) $(OBJS) $(DEPS) $(OBJS_STACK) $(DEPS_STACK) $(OBJS_VECTOR) $(DEPS_VECTOR) $(OBJS_MAP) $(DEPS_MAP)
-	@echo "\033[1;31m ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣶⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-	@echo "⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣄⣀⡀⣠⣾⡇⠀⠀⠀⠀"
-	@echo "⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀"
-	@echo "⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⢿⣿⣿⡇⠀⠀⠀⠀"
-	@echo "⠀⣶⣿⣦⣜⣿⣿⣿⡟⠻⣿⣿⣿⣿⣿⣿⣿⡿⢿⡏⣴⣺⣦⣙⣿⣷⣄⠀⠀⠀\033[1;34m Goodbye everyone\033[1;31m"
-	@echo "⠀⣯⡇⣻⣿⣿⣿⣿⣷⣾⣿⣬⣥⣭⣽⣿⣿⣧⣼⡇⣯⣇⣹⣿⣿⣿⣿⣧⠀⠀"
-	@echo "⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠸⣿⣿⣿⣿⣿⣿⣿⣷⠀\033[m"
-	@echo "\033[1;1;32m♻️  Objects have been \033[5;1;31mdeleted\033[m ♻️"
-
-fclean:
-	@$(RM) $(OBJS) $(DEPS) $(OBJS_STACK) $(DEPS_STACK) $(OBJS_VECTOR) $(DEPS_VECTOR) $(OBJS_MAP) $(DEPS_MAP)
-	@$(RM) $(NAME) $(NAME_S) $(NAME_V) $(NAME_M)
-	@echo -n "\033[0;31m⠀"
-	@echo "UNINSTALLING LEAGUE OF LEGENDS"
-	@echo "[##############]"
-	@echo "　╭━╮╭━╮ ╭╮ ╱ "　　
-	@echo "　╰━┫╰━┫ ╰╯╱ ╭╮ "　　
-	@echo "　╰━╯╰━╯　╱　╰╯" 　　　　　
-	@echo "　     COMPLETE"
-	@echo "\033[1;1;32m♻️  Objects and $(NAME) have been \033[5;1;31mdeleted\033[m ♻️"
-
-wait:
+	@$(RM) $(OBJS) $(DEPS) $(OBJS_STACK_FT) $(OBJS_STACK_STD) $(DEPS_STACK_FT) $(DEPS_STACK_STD)
+	@$(RM) $(OBJS_VECTOR_FT) $(OBJS_VECTOR_STD) $(DEPS_VECTOR_FT) $(DEPS_VECTOR_STD)
+	@$(RM) $(OBJS_MAP_FT) $(OBJS_MAP_STD) $(DEPS_MAP_FT) $(DEPS_MAP_STD)
+fclean: clean
+	@$(RM) $(NAME) $(NAME_S_FT) $(NAME_S_STD) $(NAME_V_FT) $(NAME_V_STD) $(NAME_M_FT) $(NAME_M_STD)
+	@$(RM) ft_map ft_vector ft_stack std_map std_vector std_stack
 
 re:		fclean all
 
--include $(DEPS) $(DEPS_STACK) $(DEPS_VECTOR) $(DEPS_MAP)
-.PHONY: all clean fclean re stack vector
+-include $(DEPS) $(DEPS_STACK_FT) $(DEPS_STACK_STD) $(DEPS_VECTOR_FT) $(DEPS_VECTOR_STD) $(DEPS_MAP_FT) $(DEPS_MAP_STD)
+.PHONY: all clean fclean re stack vector map
